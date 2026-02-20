@@ -5,6 +5,11 @@
   <title>LeBulikis • Agendas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- FONTE CINZEL DECORATIVE -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
     @font-face {
       font-family: 'Olivia';
@@ -19,50 +24,76 @@
     }
 
     /* ===== TELA INICIAL ===== */
-    .hero {
-      height: 100vh;
-      background: linear-gradient(
-        rgba(253,230,238,0.94),
-        rgba(253,230,238,0.94)
-      );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 20px;
-    }
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(
+    rgba(253,230,238,0.94),
+    rgba(253,230,238,0.94)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+}
 
-    .hero h1 {
-      font-family: 'Olivia', 'Playfair Display', serif;
-      font-size: 3em;
-      color: #d4af37; /* dourado */
-      margin-bottom: 15px;
-    }
+/* CONTEÚDO CENTRAL */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; /* CONTROLA a distância entre logo, texto e botão */
+}
 
-    .hero p {
-      font-size: 1.1em;
-      margin-bottom: 30px;
-    }
+/* LOGO EM IMAGEM */
+.logo {
+  max-width: 500px;   /* aumenta a largura */
+  width: 100%;
+  height: auto;
+}
 
-    .hero button {
-      background: #d4af37;
-      color: white;
-      border: none;
-      padding: 15px 35px;
-      font-size: 1em;
-      border-radius: 30px;
-      cursor: pointer;
-    }
+/* 👇 ADICIONE ISSO AQUI */
+.hero div {
+  margin-top: -380px; /* sobe texto + botão */
+}
 
-    .hero button:hover {
-      background: #b8962e;
-    }
+/* TEXTO ABAIXO DA LOGO */
+.hero p {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  margin-top: -60px;
+  color: #333;
+}
+
+/* BOTÃO */
+.hero button {
+  background: #d4af37;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: -30px;
+}
+
+.hero button:hover {
+  background: #b8962e;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  .logo {
+    height: 80px;
+  }
+}
 
     /* ===== LOJA ===== */
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 200px 20px;
     }
 
     .container h2 {
@@ -127,8 +158,8 @@
 
   <!-- INÍCIO -->
   <section class="hero">
-    <div>
-      <h1>LeBulikis</h1>
+    <div class="hero-content">
+      <img src="images/logo1tp.png" alt="LeBulikis" class="logo">
       <p>Agendas delicadas para organizar sua vida com elegância</p>
       <button onclick="document.getElementById('loja').scrollIntoView({behavior:'smooth'})">
         Entrar na loja
@@ -155,8 +186,8 @@
         <p>Planejamento completo mensal e semanal</p>
         <div class="price">R$ 49,90</div>
         <a href="agenda-intermediaria.html">
-  <button>Ver detalhes</button>
-</a>
+          <button>Ver detalhes</button>
+        </a>
       </div>
 
       <div class="card">
@@ -174,7 +205,4 @@
   </footer>
 
 </body>
-
 </html>
-
-
