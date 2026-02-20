@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Caderno Personalizado • LeBulikis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #fde6ee;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    }
+
+    /* ===== TÍTULO ===== */
+    h1 {
+      color: #c97c9f;
+      margin-bottom: 10px;
+    }
+
+    /* ===== LAYOUT ===== */
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    /* ===== GALERIA ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 15px;
+    }
+
+    .thumbs img {
+      width: 100%;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+
+    .thumbs img:hover {
+      border-color: #c97c9f;
+    }
+
+    .main-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* ===== INFO ===== */
+    .price {
+      font-size: 2em;
+      color: #d4af37;
+      margin: 15px 0;
+    }
+
+    .description {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    select, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .buy {
+      background: #c97c9f;
+      color: white;
+    }
+
+    .buy:hover {
+      background: #b5678c;
+    }
+
+    .frete {
+      background: #f1f1f1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (max-width: 800px) {
+      .product {
+        grid-template-columns: 1fr;
+      }
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .thumbs {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <a href="index.html">← Voltar para a loja</a>
+
+    <h1>Caderno Personalizado LeBulikis</h1>
+
+    <div class="product">
+      <!-- GALERIA -->
+      <div class="gallery">
+        <div class="thumbs">
+            <img src="images/caderno1.jpeg" onclick="trocar(this.src)">
+            <img src="images/agd2ER.jpeg" onclick="trocar(this.src)">
+            <img src="images/agd3ER.jpeg" onclick="trocar(this.src)">
+            <img src="images/agd4ER.jpeg" onclick="trocar(this.src)">
+            <img src="images/agd5ER.jpeg" onclick="trocar(this.src)">
+        </div>
+
+        <div class="main-image">
+            <img id="principal" src="images/caderno1.jpeg">
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div>
+        <div class="price">R$ 64,90</div>
+
+        <div class="description">
+          O <strong>Caderno Personalizado LeBulikis</strong> é ideal para anotações
+           do dia a dia, estudos ou trabalho, com capa personalizada e acabamento 
+           delicado que combina praticidade e estilo.
+        </div>
+
+        <label>Forma de pagamento</label>
+        <select>
+          <option>Pix</option>
+          <option>Cartão de crédito</option>
+          <option>Boleto</option>
+        </select>
+
+        <label>Calcular frete</label>
+        <input type="text" placeholder="Digite seu CEP">
+
+        <button class="frete" onclick="alert('Cálculo de frete simulado')">
+          Calcular frete
+        </button>
+
+        <button class="buy" onclick="alert('Compra simulada – integrar WhatsApp ou pagamento')">
+          Comprar agora
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 • LeBulikis • 🌸
+  </footer>
+
+  <script>
+    function trocar(src) {
+      document.getElementById('principal').src = src;
+    }
+  </script>
+
+</body>
+</html>
