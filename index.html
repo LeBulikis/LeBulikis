@@ -23,9 +23,101 @@
       color: #333;
     }
 
+    /* ===== HEADER TOPO ===== */
+.top-bar {
+  background: #dff7f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 20px;
+  font-size: 0.9em;
+}
+
+.top-bar a {
+  text-decoration: none;
+  color: #a06b3b;
+  border: 1px solid #a06b3b;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* ===== HEADER PRINCIPAL ===== */
+.header-main {
+  background: linear-gradient(#fde6ee, #fbd1dd);
+  text-align: center;
+  padding: 2px 1px 1px;
+}
+
+.header-content {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGO */
+.header-logo img {
+  max-width: 260px;
+  width: 100%;
+}
+
+/* BUSCA */
+.search-box {
+  display: flex;
+  justify-content: center;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 240px;
+  border-radius: 8px 0 0 8px;
+  border: 1px solid #c9a27d;
+}
+
+.search-box button {
+  padding: 10px 14px;
+  border: none;
+  background: #c9a27d;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+/* ÍCONES */
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 25px;
+  font-size: 0.9em;
+}
+
+.header-icons div {
+  text-align: center;
+  cursor: pointer;
+  color: #8a5a3c;
+}
+
+/* ===== MENU ===== */
+.nav-menu {
+  background: #f7b8c8;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 12px 10px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #6b3f2b;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.95em;
+}
+
     /* ===== TELA INICIAL ===== */
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   background: linear-gradient(
     rgba(253,230,238,0.94),
     rgba(253,230,238,0.94)
@@ -54,7 +146,25 @@
 
 /* 👇 ADICIONE ISSO AQUI */
 .hero div {
-  margin-top: -380px; /* sobe texto + botão */
+  margin-top: -330px; /* sobe texto + botão */
+}
+
+.about {
+  max-width: 900px;
+  margin: auto;
+  padding: 120px 20px 40px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: 'Cinzel Decorative', serif;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.05em;
+  line-height: 1.6;
+  color: #555;
 }
 
 /* TEXTO ABAIXO DA LOGO */
@@ -97,6 +207,7 @@
     }
 
     .container h2 {
+      font-family: 'Cinzel Decorative', serif;
       text-align: center;
       margin-bottom: 40px;
     }
@@ -156,6 +267,48 @@
 
 <body>
 
+  <!-- BARRA SUPERIOR -->
+<div class="top-bar">
+  <a href="#">Faça login ou cadastre-se</a>
+  <span>Bem-vindo(a)</span>
+</div>
+
+<!-- HEADER PRINCIPAL -->
+<header class="header-main">
+  <div class="header-content">
+
+    <!-- BUSCA -->
+    <div class="search-box">
+      <input type="text" placeholder="Pesquise aqui">
+      <button>🔍</button>
+    </div>
+
+    <!-- LOGO -->
+    <div class="header-logo">
+      <img src="images/logo1tp.png" alt="LeBulikis">
+    </div>
+
+    <!-- ÍCONES -->
+    <div class="header-icons">
+      <div>Minha<br>Conta</div>
+      <div>Todos<br>Produtos</div>
+      <div>Seus<br>Pedidos</div>
+      <div>Seu<br>Carrinho</div>
+    </div>
+
+  </div>
+</header>
+
+<!-- MENU -->
+<nav class="nav-menu">
+  <a href="#">Início</a>
+  <a href="#">LeBulikis</a>
+  <a href="#">Coleções</a>
+  <a href="#">Datas Comemorativas</a>
+  <a href="#">Contatos</a>
+  <a href="#">Avaliações</a>
+</nav>
+
   <!-- INÍCIO -->
   <section class="hero">
     <div class="hero-content">
@@ -166,6 +319,16 @@
       </button>
     </div>
   </section>
+
+  <!-- SOBRE A MARCA -->
+<section class="about">
+  <h2>Sobre a LeBulikis</h2>
+  <p>
+    A LeBulikis nasceu para transformar organização em um momento leve e especial.
+    Criamos agendas, cadernos e devocionais personalizados, com delicadeza,
+    fé e atenção a cada detalhe.
+  </p>
+</section>
 
   <!-- LOJA -->
   <section id="loja" class="container">
