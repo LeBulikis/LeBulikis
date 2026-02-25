@@ -137,10 +137,7 @@
 
 /* CONTEÚDO CENTRAL */
 .hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px; /* CONTROLA a distância entre logo, texto e botão */
+  transform: translateY(-60px);
 }
 
 /* LOGO EM IMAGEM */
@@ -148,11 +145,6 @@
   max-width: 500px;   /* aumenta a largura */
   width: 100%;
   height: auto;
-}
-
-/* 👇 ADICIONE ISSO AQUI */
-.hero div {
-  margin-top: -330px; /* sobe texto + botão */
 }
 
 .about {
@@ -199,14 +191,6 @@
 }
 
 /* RESPONSIVO */
-@media (max-width: 600px) {
-  .logo {
-  max-width: 320px;
-  width: 100%;
-  height: auto;      /* ESSENCIAL */
-  object-fit: contain;
-}
-}
 
     /* ===== LOJA ===== */
     .container {
@@ -272,54 +256,6 @@
       color: #777;
     }
     
-    @media (max-width: 768px) {
-
-  /* Header principal */
-  .header-content {
-    display: flex;          /* troca GRID por FLEX */
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* Campo de busca */
-  .search-box {
-    width: 100%;
-  }
-
-  .search-box input {
-    width: 70%;
-  }
-
-  /* Ícones da conta */
-  .header-icons {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  /* Logo menor e central */
-  .logo {
-    max-width: 220px;
-  }
-
-  /* HERO mais compacta */
-  .hero {
-    min-height: 55vh;
-  }
-
-  .hero-content {
-    margin-top: -60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu {
-    flex-wrap: wrap;
-    gap: 10px;
-    font-size: 0.85em;
-  }
-}
 
 /* ===== RESPONSIVO (CELULAR) ===== */
 @media (max-width: 768px) {
@@ -365,9 +301,9 @@
     padding: 20px;
   }
 
-  .hero div {
-    margin-top: -120px;
-  }
+  .hero-content {
+  transform: translateY(-40px);
+}
 
   .hero p {
     margin-top: -20px;
