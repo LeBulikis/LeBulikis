@@ -11,6 +11,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+
+    html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
     @font-face {
       font-family: 'Olivia';
       src: local('Olivia'), local('Playfair Display');
@@ -270,19 +276,26 @@
 
   /* Header principal */
   .header-content {
+    display: flex;          /* troca GRID por FLEX */
     flex-direction: column;
+    align-items: center;
     gap: 15px;
   }
 
   /* Campo de busca */
   .search-box {
-    width: 90%;
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 70%;
   }
 
   /* Ícones da conta */
   .header-icons {
     justify-content: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   /* Logo menor e central */
@@ -305,6 +318,77 @@
     flex-wrap: wrap;
     gap: 10px;
     font-size: 0.85em;
+  }
+}
+
+/* ===== RESPONSIVO (CELULAR) ===== */
+@media (max-width: 768px) {
+
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .search-box input {
+    width: 70%;
+  }
+
+  .header-icons {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  /* LOGO */
+  .logo {
+    max-width: 260px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 55vh;
+    padding: 20px;
+  }
+
+  .hero div {
+    margin-top: -120px;
+  }
+
+  .hero p {
+    margin-top: -20px;
+    font-size: 1em;
+  }
+
+  .hero button {
+    margin-top: -10px;
+    padding: 12px 28px;
+  }
+
+  /* MENU */
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.85em;
+  }
+
+  /* LOJA */
+  .container {
+    padding: 120px 20px;
   }
 }
 
