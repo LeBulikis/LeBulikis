@@ -195,8 +195,11 @@
 /* RESPONSIVO */
 @media (max-width: 600px) {
   .logo {
-    height: 80px;
-  }
+  max-width: 320px;
+  width: 100%;
+  height: auto;      /* ESSENCIAL */
+  object-fit: contain;
+}
 }
 
     /* ===== LOJA ===== */
@@ -262,6 +265,41 @@
       font-size: 0.9em;
       color: #777;
     }
+    
+    @media (max-width: 768px) {
+
+  /* Header principal */
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Campo de busca */
+  .search-box {
+    width: 90%;
+  }
+
+  /* Ícones da conta */
+  .header-icons {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  /* Logo menor e central */
+  .logo {
+    max-width: 220px;
+  }
+
+  /* HERO mais compacta */
+  .hero {
+    min-height: 55vh;
+  }
+
+  .hero-content {
+    margin-top: -60px;
+  }
+}
+
   </style>
 </head>
 
